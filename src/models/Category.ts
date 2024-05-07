@@ -13,11 +13,12 @@ export const CategorySchema: Schema = new Schema({
     },
     products: [
         {
-            type:Types.ObjectId
+            type:Types.ObjectId,
+            ref: 'Products'
         }
     ]
     
 },{timestamps: true})
 
-const Categories = mongoose.model<ICategory>('Category', CategorySchema)
-export default Categories
+const Category = mongoose.model<ICategory>('Category', CategorySchema)
+export default Category

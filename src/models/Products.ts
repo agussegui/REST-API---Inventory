@@ -33,7 +33,7 @@ export const ProductsSchema: Schema = new Schema({
         required: true
     },
     category: {
-        types: Types.ObjectId,
+        type: Types.ObjectId,
         ref: 'Category'
     }
 },{timestamps: true})
