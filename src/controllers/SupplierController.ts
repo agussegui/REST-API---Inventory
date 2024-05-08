@@ -30,7 +30,7 @@ export class SupplierController{
         try {
             const supplier = await Suppliers.findById(id)
             if(!supplier){
-                const error = new Error('Proeevedor no encontrada')
+                const error = new Error('Proveedor no encontrada')
                 return res.status(404).json({error: error.message})
             }
             
@@ -53,7 +53,7 @@ export class SupplierController{
             }
 
             await supplier.save()
-            res.send('Proeevedor Actualizado')
+            res.send('Proveedor Actualizado')
             
         } catch (error) {
             console.log(error)
@@ -68,12 +68,12 @@ export class SupplierController{
             const supplier = await Suppliers.findById(id)
 
             if(!supplier){
-                const error = new Error('Proeevedor no encontrada')
+                const error = new Error('Proveedor no encontrada')
                 return res.status(404).json({error: error.message})
             }
 
             await supplier.deleteOne()
-            res.send('Proeevedor Eliminado')
+            res.send('Proveedor Eliminado')
             
         } catch (error) {
             console.log(error)

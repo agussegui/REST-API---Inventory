@@ -9,7 +9,7 @@ const router = Router()
 router.post('/', 
 
     body('nameSupplier')
-        .notEmpty().withMessage('El nombre del proeevedor no puede ir vacio'),
+        .notEmpty().withMessage('El nombre del Proveedor no puede ir vacio'),
     body('email')
         .notEmpty().withMessage('El Email no puede ir vacio'),    
     body('address')
@@ -34,7 +34,7 @@ router.put('/:id',
 
     param('id').isMongoId().withMessage('ID no valido'),
     body('nameSupplier')
-        .notEmpty().withMessage('El nombre del proeevedor no puede ir vacio'),
+        .notEmpty().withMessage('El nombre del Proveedor no puede ir vacio'),
     body('email')
         .notEmpty().withMessage('El Email no puede ir vacio'),    
     body('address')

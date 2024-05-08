@@ -5,7 +5,7 @@ import { connectDB } from "./config/db";
 import productsRoutes from './routes/productsRoutes'
 import categoryRoutes from './routes/categoryRoutes'
 import supplierRoutes from './routes/supplierRoutes'
-
+import stockRoutes from './routes/stockRoutes'
 
 dotenv.config()
 
@@ -17,5 +17,8 @@ app.use(express.json())
 app.use('/api/category', categoryRoutes)
 app.use('/api/products', productsRoutes)
 app.use('/api/supplier', supplierRoutes)
+app.use('/api/stock', stockRoutes)
+
+
 
 export default app;
